@@ -1,0 +1,33 @@
+[versions]
+ktor = { strictly = "3.0.3" }
+coroutines = { strictly = "1.10.1" }
+redisson = { strictly = "3.43.0" }
+kafka = { strictly = "3.9.0" }
+javamoney-moneta = { strictly = "1.4.4" }
+javamoney-calc = { strictly = "1.1" }
+money-kotlin = { strictly = "2.0.0" }
+slf4j = { strictly = "2.0.16" }
+kotlin-logging = { strictly = "7.0.3" }
+
+[libraries]
+ktor-server-core = { group = "io.ktor", name = "ktor-server-core-jvm", version.ref = "ktor" }
+ktor-server-netty = { group = "io.ktor", name = "ktor-server-netty-jvm", version.ref = "ktor" }
+ktor-server-host-common = { group = "io.ktor", name = "ktor-server-host-common-jvm", version.ref = "ktor" }
+ktor-server-websockets = { group = "io.ktor", name = "ktor-server-websockets-jvm", version.ref = "ktor" }
+ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json-jvm", version.ref = "ktor" }
+ktor-server-config-yaml = { group = "io.ktor", name = "ktor-server-config-yaml", version.ref = "ktor" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kafka-streams = { group = "org.apache.kafka", name = "kafka-streams", version.ref = "kafka" }
+kafka-clients = { group = "org.apache.kafka", name = "kafka-clients", version.ref = "kafka" }
+redisson = { group = "org.redisson", name = "redisson", version.ref = "redisson" }
+javamoney-moneta = { group = "org.javamoney", name = "moneta", version.ref = "javamoney-moneta" }
+money-kotlin = { group = "nl.hiddewieringa", name = "money-kotlin", version.ref = "money-kotlin" }
+javamoney-calc = { group = "org.javamoney.lib", name = "javamoney-calc", version.ref = "javamoney-calc" }
+slf4j = { group = "org.slf4j", name = "slf4j-simple", version.ref = "slf4j" }
+kotlin-logging = { group = "io.github.oshai", name = "kotlin-logging", version.ref = "kotlin-logging" }
+
+[bundles]
+ktor-server = ["ktor-server-core", "ktor-server-netty", "ktor-server-host-common", "ktor-server-websockets", "ktor-serialization-json", "ktor-server-config-yaml"]
+kafka = ["kafka-streams", "kafka-clients"]
+logging = ["slf4j", "kotlin-logging"]
+money = ["javamoney-moneta", "money-kotlin", "javamoney-calc"]
