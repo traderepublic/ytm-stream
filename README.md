@@ -18,6 +18,9 @@ only a single Redis subscription is maintained. This approach reduces overhead a
 efficiently used, as it avoids multiple redundant subscriptions for each client. It also minimizes the complexity
 of managing connections and allows for better scalability.
 
+If you want to read more about this code, please check the 
+[blog post](https://traderepublic.substack.com/p/real-time-bond-yield-to-maturity) that explains the code in detail.
+
 ## How to Run the Application
 
 ### Prerequisites
